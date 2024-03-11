@@ -1,0 +1,9 @@
+
+  body {
+    background-image: url('../images/car-with-bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%, 20%;
+    background-position: center;
+    width: 100%;
+  }
