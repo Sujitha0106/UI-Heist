@@ -1,9 +1,149 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  background-image: url("../images/car-with-bg.png");
+  background-repeat: no-repeat, no-repeat;
+  /* background-attachment: fixed,fixed; */
+  background-size: contain, contain;
+  background-position: center, center;
+}
+body {
+  font-family: "Source Sans 3", sans-serif;
+  font-style: normal;
+}
 
-  body {
-    background-image: url('../images/car-with-bg.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%, 20%;
-    background-position: center;
-    width: 100%;
+.run-mode-screen {
+  width: 40%;
+  margin: auto;
+  color: #fff;
+  margin-top: 420px;
+}
+.run-mode-container-1 {
+  display: flex;
+  justify-content: space-between;
+}
+.current-time {
+  font-size: 16px;
+  padding-left: 20px;
+}
+.greeting-msg {
+  font-style: italic;
+  font-weight: 100;
+}
+
+.current-temp {
+  font-size: larger;
+}
+
+.temp-msg {
+  font-weight: 100;
+  font-size: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-img {
+  height: 15px;
+}
+
+.run-mode-container-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.current-disel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.current-disel-progress {
+  width: 100px;
+  height: 8px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.current-disel-quantity {
+  font-size: 38px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+}
+.current-disel-quantity-measure {
+  font-size: 12px;
+  font-weight: 100;
+  padding-bottom: 5px;
+}
+.progress {
+  width: 0;
+  height: 100%;
+  animation: fill 1000s linear forwards;
+}
+
+.warn-div{
+  display: flex;
+  align-items: center;
+}
+.warn-img{
+  height:20px;
+  padding-right: 4px;
+}
+.warn-msg{
+  color:#e1a80c;
+}
+
+.current-speed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.current-speed-quantity {
+  font-size: 50px;
+}
+
+.steering-img {
+  width: 140px;
+  animation: steering 4s infinite -2s linear;
+  /* transform-origin: center; */
+}
+
+/* .rotated {
+  transform: rotate(45deg);
+} */
+
+@keyframes fill {
+  100% {
+    width: 0;
+    background-color: #b52424;
   }
+  10% {
+    width: 30%;
+    background-color: #b52424;
+  }
+  0% {
+    width: 100%;
+    background-color: #4caf50;
+  }
+}
+
+@keyframes steering {
+  0% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(-45deg);
+  }
+  36%,
+  56% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
